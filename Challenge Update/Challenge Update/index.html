@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styler.css" />
+    <title></title>
+</head>
+<body>
+    <!--Searchbar HTML-->
+    <div class="searchbar">
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    </div>
+
+    <div id="map"></div>
+
+    <!--Directions HTML-->
+    <div style="display: none">
+        <input id="origin-input" class="controls" type="text"
+               placeholder="Enter an origin location">
+
+        <input id="destination-input" class="controls" type="text"
+               placeholder="Enter a destination location">
+
+        <div id="mode-selector" class="controls">
+            <input type="radio" name="type" id="changemode-walking" checked="checked">
+            <label for="changemode-walking">Walking</label>
+
+            <input type="radio" name="type" id="changemode-transit">
+            <label for="changemode-transit">Transit</label>
+
+            <input type="radio" name="type" id="changemode-driving">
+            <label for="changemode-driving">Driving</label>
+        </div>
+    </div>
+
+
+    <div id="arrivaltime">
+        <p id="time"></p>
+    </div>
+
+
+    <script src="/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-rLv2q7zWmXmc2bvexdasgnL9_pTjZE&libraries=places&callback=initMap"
+            async defer></script>
+</body>
+</html>
